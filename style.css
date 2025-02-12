@@ -1,0 +1,1035 @@
+body {
+    background-color: #F5F5F5;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.container > * {
+    box-shadow: 0px 0px 20px black;
+}
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #561C24;
+    display: flex;
+    justify-content: space-evenly; /* يجعل nav على اليسار والقائمة على اليمين */
+    align-items: center; /* لضبط العناصر عموديًا */
+    padding: 15px 20px; /* تعديل التباعد */
+    box-shadow: 2px 2px 10px 1px black;
+    z-index: 1000;
+}
+
+
+header ul.menu li a:hover {
+    color: #FFFFFF;
+    transition: color 0.3s ease-in-out;
+}
+/* هنا الكود لي تحتاج تنسخو */
+#home {
+    padding: 5px;
+    box-shadow: 0px 0px 8px 1px rgb(114, 86, 86);
+    border-radius: 25px;
+    background-color: #2c171a5a;
+}
+
+
+header ul.menu {
+    display: flex;
+    list-style: none;
+    gap: 3em;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+header ul.menu li {
+
+    display: flex;
+    padding: 0 0.3em;
+}
+
+
+header ul.menu li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #C7B7A3;
+    margin: 0;
+    padding:1px;
+    border: 0px;
+    transition: color 0.3s ease-in-out;
+}
+
+
+nav {
+    display: none;
+    cursor: pointer;
+}
+
+nav i {
+    color: #C7B7A3;
+    font-size: 24px; /* حجم الأيقونة */
+}
+nav i:hover {
+    color: #ffffff;
+    font-size: 24px; /* حجم الأيقونة */
+    transition: color 0.3s ease-in-out;
+}
+
+/* القائمة الجانبية */
+aside.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* إخفاء القائمة خارج الشاشة */
+    width: 250px;
+    height: 100%;
+    background-color: #561C24;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.75s ease-in-out; /* إضافة انتقال سلس */
+    z-index: 1000;
+}
+
+aside.sidebar ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+aside.sidebar ul li {
+    margin: 15px 0;
+}
+
+aside.sidebar ul li a {
+    text-decoration: none;
+    color: #C7B7A3;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+aside.sidebar ul li a:hover {
+    color: #FFFFFF;
+}
+
+/* إظهار nav في الشاشات الصغيرة */
+@media (max-width: 667.2px) {
+    nav {
+        display: auto;
+    }
+    header {
+        background-color: #561c24;
+        display: flex;
+        box-shadow: 1px 1px 10px 1px black;
+        justify-content: space-between; /* تعديل ليكون nav على اليسار والقائمة على اليمين */
+        padding: 20px 20px; /* تعديل التباعد */
+        position: fixed;
+        z-index: 1000;
+    }
+    header ul.menu {
+        display: none; /* إخفاء القائمة الرئيسية في الشاشات الصغيرة */
+    }
+}
+@media (max-width: 344px) {
+
+    
+
+
+    body {
+        font-size: 10px; /* تقليل حجم الخط لتناسب الشاشة الصغيرة */
+        padding: 5px;
+       
+    }
+
+    header {
+        padding: 8px; /* تقليل التباعد */
+    }
+
+    header ul.menu {
+        display: none; /* إخفاء القائمة الكبيرة */
+    }
+
+    nav i {
+        font-size: 20px; /* تقليل حجم الأيقونة */
+    }
+
+    aside.sidebar {
+        width: 200px; /* تقليل عرض القائمة الجانبية */
+        left: -200px; /* تعديل الإخفاء */
+    }
+
+    aside.sidebar ul li a {
+        font-size: 16px; /* تقليل حجم الخط في القائمة الجانبية */
+    }
+}
+
+
+
+#the1 {
+
+    height: 100vh; /* يغطي الشاشة بالكامل */
+    background-image: url('2019-12-12.jpg'); /* تأكد من صحة اسم الملف */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px; /* يمنع التصاق النص بالحواف */
+    font-family: Arial, sans-serif;
+    background-blend-mode: darken; /* يجعل الخلفية أكثر تناسقًا */
+    box-shadow: 1px 1px 10px 1px black;
+    position: relative;
+    z-index: 1; }
+    /* يجعل العنصر الأول في المقدمة */
+
+
+
+#the1 h1 {
+    color: #fefefe;
+    font-size: 3rem; /* تكبير العنوان */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* تحسين وضوح النص */
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    transition: font-size 1s ease-in-out;
+}
+
+@media (max-width: 668px) {
+     #the1 h1 {
+        font-size: 2rem; /* تصغير العنوان على الشاشات الصغيرة */
+        padding: 10px;
+    }
+}
+@media (max-width: 368px) {
+     #the1 h1 {
+        font-size: 1rem; /* تصغير العنوان على الشاشات الصغيرة */
+        padding: 5px;
+    }
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background: linear-gradient(145deg, #7a2f38, #5c1f26); /* تأثير التدرج اللوني */
+    text-decoration: none;
+    border-radius: 16px;
+    transition: 0.9s ease;
+    text-shadow: 0px 0px 10px rgba(240, 240, 240, 0.7);
+    
+    /* تأثير الظل لجعله يبدو مرفوعًا عن السطح */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5),
+                inset -2px -2px 5px rgba(255, 255, 255, 0.2),
+                inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* عند تحريك المؤشر فوق الزر، نجعله يرتفع أكثر */
+.cta-button:hover {
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.6),
+                inset -2px -2px 5px rgba(255, 255, 255, 0.3),
+                inset 2px 2px 5px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px); /* رفع الزر عند التحويم */
+    background: linear-gradient(145deg, #C7B7A3, #9d907f); /* تأثير التدرج اللوني */
+
+}
+
+/* عند الضغط على الزر، نجعله يبدو مضغوطًا للأسفل */
+.cta-button:active {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4),
+                inset -2px -2px 5px rgba(255, 255, 255, 0.2),
+                inset 2px 2px 5px rgba(0, 0, 0, 0.4);
+    transform: translateY(4px); /* تحريكه للأسفل عند الضغط */
+}
+
+
+/*
+
+.menu-preview {
+    box-shadow: 0px 0px 7px 1px black;
+    z-index: 1003;
+    position: relative; 
+    text-align: center;
+    padding: 50px 20px;
+    background: #E8D8C4;
+    transition: background 1s ease-in-out;
+
+}
+
+.menu-preview h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #561C24;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.menu-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 1px 4px 15px  rgba(0, 0, 0, 0.681);
+    width: 250px;
+    text-align: center;
+    transition: color 1s ease-in-out ,width 0.4s ease-in-out ,background 0.4s ease-in-out, padding 1s ease-in-out;
+
+}
+.menu-item:hover {
+    background: rgb(238, 238, 238);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 1px 4px 35px  rgba(0, 0, 0, 0.766);
+    width: 260px;
+    text-align: center;
+    transition: color 1s ease-in-out ,width 0.4s ease-in-out,background 0.4s ease-in-out, padding 1s ease-in-out;
+
+}
+
+
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #561C24;}
+*/
+/* هنا تاع المينيو ونظن تاع الاتصال */
+
+.contact-info {
+    box-shadow: 0px 0px 7px 1px black;
+    z-index: 1002;
+    position: relative; 
+    text-align: center;
+    padding: 50px 20px;
+    background: #6D2932;
+    transition: background 1s ease-in-out;
+    color:white;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #E8D8C4;
+}
+.contact-info 
+
+
+.contact-details a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+.contact-details i {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #ad898e;
+}
+/* هنا تاع المينيو ونظن تاع الاتصال */
+
+.testimonials {
+    height: 150vh; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    text-align: center;
+    padding: 60px 20px;
+    font-family: Arial, sans-serif;
+    background-image: url(1.jpg);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    box-shadow: 0px 3px 7px 1px rgb(0, 0, 0);
+    z-index: 1000;
+    position: relative; 
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: wheat;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(173, 173, 173, 0.5);
+}
+
+
+
+
+.testimonial-box:hover {
+    transition:transform 0.75s ease-in-out,box-shadow 0.75s ease-in-out;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.36);
+}
+
+.testimonial-box p {
+    font-size: 1.2rem;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* هنا تاع العملاء ونظن تاع الخريطة */
+
+
+
+iframe {
+    border: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 1px #E8D8C4;
+}
+
+.location-map {
+    height: 150vh; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column; 
+    padding: 60px 160px;
+    font-family: Arial, sans-serif;
+    background-image: url(2019-11-28.jpg);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    box-shadow: 0px 0px 7px 1px black;
+    z-index: 1001;
+    position: relative; 
+}
+
+.location-map h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: wheat;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(173, 173, 173, 0.5);
+}
+
+@media (max-width: 668px) {
+    .location-map h2 {
+        font-size: 1.5rem;
+    }
+    iframe {
+        height: 200px;
+    }
+    .location-map {
+        padding: 60px 20px;
+
+    }
+}
+
+
+/* هنا   تاع الخريطة */
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 2000;
+}
+
+
+/* زر واتساب */
+.whatsapp-button {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: #6D2932;
+    color: #E8D8C4;
+    padding: 12px 18px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* يجعل الأيقونة والنص منفصلين */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.whatsapp-button:hover {
+    background: #561C24;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-button img {
+    width: 18px;
+    height: 18px;
+}
+
+
+
+
+
+
+
+/* 📱 تحسين التناسق مع الهواتف */
+@media (max-width: 668px) {
+    .testimonials {
+        height: auto;
+        padding: 40px 15px;
+    }
+
+    .testimonials h2 {
+        font-size: 2rem;
+    }
+
+    .testimonial-box {
+        width: 90%; /* جعل الشهادة تأخذ عرضًا أكبر على الهواتف */
+        padding: 20px;
+    }
+
+    .testimonial-box p {
+        font-size: 1rem;
+    }
+
+    .whatsapp-button {
+        bottom: 10px;
+        right: 10px;
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+}
+
+footer {
+    display: flex;
+    background-color: #E8D8C4;
+    justify-content: center;
+
+}
+footer div p{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    font-size: small;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    text-decoration: none;
+}
+footer div p a {
+text-decoration: none;
+color: #5c1f26;
+transition:color 0.4s ,font-size 0.4s ;
+
+}
+footer div p a:hover {
+    text-decoration: none;
+    color: #000000;
+    font-size: medium;
+    transition:color 0.4s ,font-size 0.4s ;
+    }
+
+.social-icons {
+display: flex;
+margin-top: 4px;
+justify-content: space-evenly;
+font-size: 1px   ;
+transition:color 0.4s ,font-size 1s ;
+}
+
+.fa-brands.fa-whatsapp{
+    color:rgb(50, 200, 37);
+    text-decoration: none;
+    font-size: 15px;
+    transition:color 0.4s ,font-size 0.3s ;
+
+}
+.fa-brands.fa-whatsapp:hover{
+    color:rgb(50, 200, 37);
+    text-decoration: none;
+    font-size: 19px;
+    transition:color 0.4s ,font-size 0.3s ;
+
+}
+
+.fa-brands.fa-facebook{
+    color:blue;
+    text-decoration: none;
+    font-size: 15px;
+    transition:color 0.4s ,font-size 0.3s ;
+
+}
+
+.fa-brands.fa-facebook:hover{
+    color:blue;
+    text-decoration: none;
+    font-size: 19px;
+    transition:color 0.4s ,font-size 0.3s ;
+
+}
+section div h4 {
+    color: #C7B7A3;
+}
+
+.custom-translate {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #561C24;
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 20px auto;
+    color: #E8D8C4;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.custom-translate select {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    background: #E8D8C4;
+    color: #561C24;
+}
+
+.custom-translate select:hover {
+    background: #C7B7A3;
+}
+
+.imgg {
+    margin-left:250px ;
+    display: flex;
+    margin-top: 30px;
+    padding: 0;
+    border: none;
+    width: 100%;  /* اجعل الصورة تأخذ حجم العنصر */
+    max-width: 60px;  /* أقصى عرض للحفاظ على الجودة */
+    height: auto;  /* يحافظ على تناسب الصورة */
+    border-radius: 12px; /* زوايا ناعمة */
+    object-fit: cover; /* يضمن أن الصورة لا تتشوه */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.imgg:hover {
+    transform: scale(1.1); /* تكبير بسيط عند التحويم */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-box {
+    background: rgba(109, 41, 50, 0.9); /* اجعل الخلفية شفافة قليلاً */
+    padding: 25px;
+    margin: 15px auto;
+    width: 80%; /* عرض مرن يناسب جميع الأجهزة */
+    max-width: 600px;
+    border-radius: 15px; /* زوايا ناعمة أكثر */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    backdrop-filter: blur(10px); /* تأثير زجاجي أنيق */
+}
+
+@media (max-width: 668px) {
+    .imgg {
+        margin-left: 160px;
+        max-width: 60px; /* تقليل حجم الصور قليلاً على الهواتف */
+    }
+
+    .testimonial-box {
+        width: 90%; /* توسعة العنصر ليملأ الشاشة */
+        padding: 20px;
+    }
+}
+
+
+
+.imgg {
+    margin: auto;
+    display: block;
+}
+@media (max-width: 668px) {
+    .cta-button {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}
+@media (max-width: 667px) {
+    nav {
+        display: block;
+    }
+    header ul.menu {
+        display: none;
+    }
+}
+
+header, header .menu {
+    direction: ltr; /* إعادة الاتجاه إلى اليسار لليمين */
+    text-align: left; /* محاذاة النص إلى اليسار */
+}
+
+header .menu li {
+    float: left; /* إعادة العناصر إلى اليسار */
+}
+
+
+
+   
+
+
+
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+/*الاسالة الشائعة*/
+
+.faq {
+    text-align: center;
+    padding: 50px 20px;
+    background: #6D2932;
+    box-shadow: 0px 0px 7px 1px black;
+    z-index: 1000;
+    position: relative;   
+    transition: background 1s ease-in-out;
+}
+
+.faq h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #E8D8C4;
+   
+}
+
+
+.faq-item{
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: rgb(238, 238, 238);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 4px 35px  rgba(188, 17, 17, 0.474);
+}
+
+
+.faq-item:hover {
+    background-color: #E8D8C4;
+    box-shadow: 1px 4px 35px  rgba(209, 209, 209, 0.474);
+
+}
+
+
+/*الاسالة الشائعة */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* تحسين معرض الصور */
+.photo-gallery {
+
+    text-align: center;
+    padding: 20px;
+    background-color: #6D2932;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    box-shadow: 2px 2px 10px 1px black;
+    z-index: 1000;
+}
+
+.photo-gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 15px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+}
+
+/* إضافة طبقة نصية عند التحويم */
+.gallery-item::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color:#E8D8C4;
+    color: black;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: bottom 0.3s ease;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.gallery-item:hover::after {
+    bottom: 0;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .photo-gallery h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .photo-gallery h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* تأثيرات التحويم والنقر */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 15px;
+}
+
+/* تأثيرات التحويم (لأجهزة الكمبيوتر) */
+.gallery-item:hover,
+.gallery-item:focus {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item:hover img,
+.gallery-item:focus img {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+}
+
+/* تأثيرات النقر (للهواتف) */
+.gallery-item:active {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item:active img {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+}
+
+/* طبقة النص عند التحويم أو النقر */
+.gallery-item::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #E8D8C4;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: bottom 0.3s ease;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.gallery-item:hover::after,
+.gallery-item:focus::after,
+.gallery-item:active::after {
+    bottom: 0;
+}
+
+
+/*المينيو */
+/* تنسيق العنصر الرئيسي للقائمة */
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيق كل عنصر في القائمة */
+.menu-item {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* تنسيق الصور */
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #a6483f;
+    transition: opacity 0.3s ease;
+}
+
+.menu-item:hover img {
+    opacity: 0.9;
+}
+
+/* تنسيق العنوان */
+.menu-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 15px 20px 10px;
+    text-align: center;
+}
+
+/* تنسيق الوصف */
+.menu-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 20px 15px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* تنسيق السعر */
+.menu-item .price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #9e453c;
+    text-align: center;
+    margin: 0 20px 20px;
+}
+
+/* تأثيرات إضافية للأناقة */
+.menu-item::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #a94a42, #9f6056);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-item:hover::after {
+    opacity: 1;
+}
+
+
+@media (max-width: 668px) {
+    .whatsapp-button {
+        bottom: 5px;
+        right: 5px;
+        padding: 5px 7px;
+        font-size: 0.5rem;
+        gap: 3px;
+        background-color: #7e3a3a3e;
+        color: rgba(255, 255, 255, 0.395);
+    }
+    .whatsapp-button img {
+        width: 10px;
+        height: 10px;
+    }
+}
